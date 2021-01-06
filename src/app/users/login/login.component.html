@@ -1,0 +1,127 @@
+<p>login works! {{loginmessage}}</p>
+
+<span>below button is from login component</span>
+
+<button name="btnWelcome" (click)="getWelcomeMessage('hari')">Welcome</button>
+
+<br><br><br>
+keyup
+<input type="text" #txtName (keyup)="getWelcomeMessage(txtName.value)"/>
+
+<br><br><br>
+keyup.enter
+<input type="text" #txtNameenter (keyup.enter)="getWelcomeMessage(txtNameenter.value)"/>
+
+<br><br><br>
+keyup.space
+<input type="text" #txtNamespace (keyup.space)="getWelcomeMessage(txtNamespace.value)"/>
+
+<br><br><br>
+keydown
+<input type="text" #txtName1 (keydown)="getWelcomeMessage(txtName1.value)"/>
+
+<br><br><br>
+blur
+<input type="text" #txtName2 (blur)="getWelcomeMessage(txtName2.value)"/>
+
+<br><br><br>
+mousein, mouseover
+<input type="text" #txtName3 (mouseover)="getWelcomeMessage(txtName3.value)"/>
+
+<br><br><br>
+mouseout, mouseleave
+<input type="text" #txtName4 (mouseout)="getWelcomeMessage(txtName4.value)"/>
+
+<br><br><br>
+get value of text box on button click
+<input type="text" #txtUserName/><button (click)="getWelcomeMessage(txtUserName.value)">GetName</button>
+<br><br><br>
+get value of text box using $event on blur 
+<input type="text" (blur)="getWelcomeMessage1($event.target)"/>
+<hr>
+<br><br><br>
+Property Binding through interpolation
+<input type="text" [disabled]="isTextBoxDisabled" value="{{val}}">
+
+<br><br><br>
+Property Binding through Property
+<input type="text" disabled="{{isTextBoxDisabled}}" [value]="val">
+<br><br><br>
+enable text boxes
+<button (click)="enabletextbox()">Enable TextBox</button>
+
+there is difference between preperty Binding through interpolation and Property. [disabled]="some property in component" this will work enable and disable but disabled="{{isTextBoxDisabled}}" like this statm will not work this is main difference between them.
+
+<hr>
+<br><br>
+conditional statements
+<br><br>
+If
+<br><br>
+<span *ngIf="showif else elseblock">
+    <span>if block</span>
+</span>
+<ng-template #elseblock>
+    <span>if block not shown else block shown as if condition failed</span>
+</ng-template>
+
+<br><br>
+If else using ng-templates
+<br><br>
+<span *ngIf="showif then ifblock; else elseblock">
+    
+</span>
+<ng-template #ifblock>
+    <span>this is if block</span>
+</ng-template>
+<ng-template #elseblock>
+    <span>this is else block</span>
+</ng-template>
+
+<br><br>
+If else using ng-templates property binding
+<br><br>
+
+<ng-template [ngIf]="showif">
+    <span>this is if block with property binding</span>
+</ng-template>
+<ng-template [ngIf]="!showif">
+    <span>this is else block with property binding</span>
+</ng-template>
+
+
+<br><br>
+switch property binding
+<br><br>
+
+<div [ngSwitch]="col">
+    <span style="color:red" *ngSwitchCase="'red'"> Red Color </span>
+    <span style="color:blue" *ngSwitchCase="'blue'"> Blue Color </span>
+    <span style="color:green" *ngSwitchCase="'green'"> Green Color </span>
+    <span style="color:grey" *ngSwitchDefault> default Color </span>
+</div>
+
+
+<br><br>
+For loop with arr
+<br><br>
+
+<div *ngFor="let item of arr">
+    {{item}}
+</div>
+
+<br><br>
+For loop with object array
+<br><br>
+
+<div *ngFor="let item of arrwithobj">
+    {{item.name}} age is {{item.age}}
+</div>
+
+<hr>
+<br><br><br>
+form
+<Form #myForm="ngForm" (submit)="getUserDetails(myForm)">
+<input type="text" ngModel name="username" placeholder="enter user name"/>
+<br>
+</Form>
