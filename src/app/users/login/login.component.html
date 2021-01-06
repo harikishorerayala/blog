@@ -6,38 +6,38 @@
 
 <br><br><br>
 keyup
-<input type="text" #txtName (keyup)="getWelcomeMessage(txtName.value)"/>
+<input type="text" #txtName (keyup)="getWelcomeMessage(txtName.value)" />
 
 <br><br><br>
 keyup.enter
-<input type="text" #txtNameenter (keyup.enter)="getWelcomeMessage(txtNameenter.value)"/>
+<input type="text" #txtNameenter (keyup.enter)="getWelcomeMessage(txtNameenter.value)" />
 
 <br><br><br>
 keyup.space
-<input type="text" #txtNamespace (keyup.space)="getWelcomeMessage(txtNamespace.value)"/>
+<input type="text" #txtNamespace (keyup.space)="getWelcomeMessage(txtNamespace.value)" />
 
 <br><br><br>
 keydown
-<input type="text" #txtName1 (keydown)="getWelcomeMessage(txtName1.value)"/>
+<input type="text" #txtName1 (keydown)="getWelcomeMessage(txtName1.value)" />
 
 <br><br><br>
 blur
-<input type="text" #txtName2 (blur)="getWelcomeMessage(txtName2.value)"/>
+<input type="text" #txtName2 (blur)="getWelcomeMessage(txtName2.value)" />
 
 <br><br><br>
 mousein, mouseover
-<input type="text" #txtName3 (mouseover)="getWelcomeMessage(txtName3.value)"/>
+<input type="text" #txtName3 (mouseover)="getWelcomeMessage(txtName3.value)" />
 
 <br><br><br>
 mouseout, mouseleave
-<input type="text" #txtName4 (mouseout)="getWelcomeMessage(txtName4.value)"/>
+<input type="text" #txtName4 (mouseout)="getWelcomeMessage(txtName4.value)" />
 
 <br><br><br>
 get value of text box on button click
-<input type="text" #txtUserName/><button (click)="getWelcomeMessage(txtUserName.value)">GetName</button>
+<input type="text" #txtUserName /><button (click)="getWelcomeMessage(txtUserName.value)">GetName</button>
 <br><br><br>
-get value of text box using $event on blur 
-<input type="text" (blur)="getWelcomeMessage1($event.target)"/>
+get value of text box using $event on blur
+<input type="text" (blur)="getWelcomeMessage1($event.target)" />
 <hr>
 <br><br><br>
 Property Binding through interpolation
@@ -50,7 +50,9 @@ Property Binding through Property
 enable text boxes
 <button (click)="enabletextbox()">Enable TextBox</button>
 
-there is difference between preperty Binding through interpolation and Property. [disabled]="some property in component" this will work enable and disable but disabled="{{isTextBoxDisabled}}" like this statm will not work this is main difference between them.
+there is difference between preperty Binding through interpolation and Property. [disabled]="some property in component"
+this will work enable and disable but disabled="{{isTextBoxDisabled}}" like this statm will not work this is main
+difference between them.
 
 <hr>
 <br><br>
@@ -69,7 +71,7 @@ If
 If else using ng-templates
 <br><br>
 <span *ngIf="showif then ifblock; else elseblock">
-    
+
 </span>
 <ng-template #ifblock>
     <span>this is if block</span>
@@ -121,7 +123,7 @@ For loop with object array
 <hr>
 <br><br><br>
 form
-<Form #myForm="ngForm" (submit)="getUserDetails(myForm)">
-<input type="text" ngModel name="username" placeholder="enter user name"/>
-<br>
-</Form>
+<form #myForm="ngForm" (submit)="getUserDetails(myForm)">
+    <input type="text" ngModel name="username" placeholder="enter user name" />
+    <br>
+</form>
