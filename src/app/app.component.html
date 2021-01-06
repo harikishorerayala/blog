@@ -1,11 +1,14 @@
-<span>{{ title }} app is running!</span>
-<h1>{{getTitle()}}</h1>
-<h2>{{obj.name}} age is {{obj.age}}</h2>
-<span>{{arr}}</span>
-<span>array length is {{arr.length}}</span>
+<app-header></app-header>
 
-<span>site url is {{objWindow.location.href}}</span>
+<span>{{ title }} app is running!</span>
+<h1>{{ getTitle() }}</h1>
+<h2>{{ obj.name }} age is {{ obj.age }}</h2>
+<span>{{ arr }}</span>
+<span>array length is {{ arr.length }}</span>
+
+<span>site url is {{ objWindow.location.href }}</span>
 
 <app-list></app-list>
 
 <app-login></app-login>
+<app-footer></app-footer>

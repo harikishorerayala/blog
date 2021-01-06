@@ -13,18 +13,18 @@ export class LoginComponent implements OnInit {
   }
 loginmessage="from login component";
 
-getWelcomeMessage(name:any){
+getWelcomeMessage(name:string){
 return alert(name);
 
 }
 
 getUserDetails(val:any){
-  alert(val.value);
+  console.log(val);
 }
 
 getWelcomeMessage1(e:any){
   return alert(e.value);
-  
+
   }
 
 val=" this is default value";

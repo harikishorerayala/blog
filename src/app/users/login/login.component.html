@@ -123,7 +123,8 @@ For loop with object array
 <hr>
 <br><br><br>
 form
-<form #myForm="ngForm" (submit)="getUserDetails(myForm)">
+<form #myForm="ngForm" (submit)="getUserDetails(myForm.value)">
     <input type="text" ngModel name="username" placeholder="enter user name" />
     <br>
+    <button>get values in console</button>
 </form>
