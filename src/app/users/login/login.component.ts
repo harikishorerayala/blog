@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 loginmessage="from login component";
-
+color="green";
 getWelcomeMessage(name:string){
 return alert(name);
 
@@ -52,4 +52,10 @@ arrwithobj=[
     name:"rayala", age:"30"
   }
 ]
+
+isRed=false;
+toggleError(){
+this.isRed=!this.isRed;
+
+}
 }

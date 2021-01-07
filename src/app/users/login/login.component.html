@@ -128,3 +128,17 @@ form
     <br>
     <button>get values in console</button>
 </form>
+
+
+<hr>
+<br><br><br>
+Style Binding and Normal style tag
+<br>
+<span style="color:red">Normal style tag</span>
+<br>
+<span [style.color]="'red'">Style Binding tag</span>
+<br>
+<span [style.color]="color">Style Binding with property</span>
+<br>
+<span [style.color]="isRed?'red':'blue'">Style Binding with property</span>
+<button (click)="toggleError()">toggle Error</button>

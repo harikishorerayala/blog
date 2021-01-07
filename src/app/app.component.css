@@ -1,0 +1,8 @@
+#childcontent
+{
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 40px;
+  top:170px;
+  position: relative;
+}
