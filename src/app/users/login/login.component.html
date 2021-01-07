@@ -61,10 +61,10 @@ conditional statements
 If
 <br><br>
 <span *ngIf="showif else elseblock">
-    <span>if block</span>
+  <span>if block</span>
 </span>
 <ng-template #elseblock>
-    <span>if block not shown else block shown as if condition failed</span>
+  <span>if block not shown else block shown as if condition failed</span>
 </ng-template>
 
 <br><br>
@@ -74,10 +74,10 @@ If else using ng-templates
 
 </span>
 <ng-template #ifblock>
-    <span>this is if block</span>
+  <span>this is if block</span>
 </ng-template>
 <ng-template #elseblock>
-    <span>this is else block</span>
+  <span>this is else block</span>
 </ng-template>
 
 <br><br>
@@ -85,10 +85,10 @@ If else using ng-templates property binding
 <br><br>
 
 <ng-template [ngIf]="showif">
-    <span>this is if block with property binding</span>
+  <span>this is if block with property binding</span>
 </ng-template>
 <ng-template [ngIf]="!showif">
-    <span>this is else block with property binding</span>
+  <span>this is else block with property binding</span>
 </ng-template>
 
 
@@ -97,10 +97,10 @@ switch property binding
 <br><br>
 
 <div [ngSwitch]="col">
-    <span style="color:red" *ngSwitchCase="'red'"> Red Color </span>
-    <span style="color:blue" *ngSwitchCase="'blue'"> Blue Color </span>
-    <span style="color:green" *ngSwitchCase="'green'"> Green Color </span>
-    <span style="color:grey" *ngSwitchDefault> default Color </span>
+  <span style="color:red" *ngSwitchCase="'red'"> Red Color </span>
+  <span style="color:blue" *ngSwitchCase="'blue'"> Blue Color </span>
+  <span style="color:green" *ngSwitchCase="'green'"> Green Color </span>
+  <span style="color:grey" *ngSwitchDefault> default Color </span>
 </div>
 
 
@@ -109,7 +109,7 @@ For loop with arr
 <br><br>
 
 <div *ngFor="let item of arr">
-    {{item}}
+  {{item}}
 </div>
 
 <br><br>
@@ -117,16 +117,16 @@ For loop with object array
 <br><br>
 
 <div *ngFor="let item of arrwithobj">
-    {{item.name}} age is {{item.age}}
+  {{item.name}} age is {{item.age}}
 </div>
 
 <hr>
 <br><br><br>
 form
 <form #myForm="ngForm" (submit)="getUserDetails(myForm.value)">
-    <input type="text" ngModel name="username" placeholder="enter user name" />
-    <br>
-    <button>get values in console</button>
+  <input type="text" ngModel name="username" placeholder="enter user name" />
+  <br>
+  <button>get values in console</button>
 </form>
 
 
@@ -142,3 +142,22 @@ Style Binding and Normal style tag
 <br>
 <span [style.color]="isRed?'red':'blue'">Style Binding with property</span>
 <button (click)="toggleError()">toggle Error</button>
+
+<hr>
+<br>
+Installed bootstrap ng add @ng-bootstrap/ng-bootstrap
+<p>
+
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </ngb-alert>
+
+</p>
+
+<br>
+<p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+</p>
+<p>
+  <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+</p>
